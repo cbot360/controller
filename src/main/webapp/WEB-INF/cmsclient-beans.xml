@@ -46,8 +46,8 @@
     
   	<bean id="cmsClient" class="com.oneops.controller.cms.CMSClient">
        	<property name="restTemplate" ref="woRestTemplate" />
-       	<property name="serviceUrl" value="http://${CMS_API_HOST:localhost}:8080/adapter/rest/" />
-       	<property name="transUrl" value="http://${CMS_API_HOST:localhost}:8080/transistor/rest/" />
+       	<property name="serviceUrl" value="http://10.0.3.9:8080/adapter/rest/" />
+       	<property name="transUrl" value="http://10.0.3.9:8080/transistor/rest/" />
         <property name="cmsCrypto" ref="cmsCrypto" />
         <property name="stepWoLimit" value="${CONTROLLER_WO_LIMIT:100}" />
 		<property name="deploymentNotifier" ref="deploymentNotifier" />
@@ -62,7 +62,7 @@
 	<bean id="deploymentNotifier" class="com.oneops.controller.cms.DeploymentNotifier">
 		<property name="antennaClient" ref="antennaClient">
 		</property>
-		<property name="serviceUrl" value="http://${CMS_API_HOST:localhost}:8080/adapter/rest/"/>
+		<property name="serviceUrl" value="http://10.0.3.9:8080/adapter/rest/"/>
 		<property name="restTemplate" ref="woRestTemplate" />
    	</bean>
 
